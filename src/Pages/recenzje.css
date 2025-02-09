@@ -1,0 +1,81 @@
+
+html {
+  overflow-x: hidden;
+}
+#recenzje {
+  background-image: url(src/assets/recenzje-dark-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 300px 0;
+}
+#recenzje-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#recenzje-list > h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 30px;
+  color: #5F4254;
+}
+#review-container {
+  width: 60vw;
+  max-width: 700px;
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  background-color: #b1838e;
+  display: flex;
+  flex-direction: column;
+}
+.card-container {
+  display: flex;
+  width: 100%;
+}
+.review-card {
+  padding: 20px;
+  width: 30%;
+}
+.review-image {
+  width: 200px;
+}
+.text-link {
+  color: #EEEEEE;
+  margin-bottom: 20px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
+.text-link > a {
+  width: 200px;
+  text-decoration: none;
+  padding: 10px 10px;
+  border: none;
+  background-color: #564147;
+  border: 0px solid #EEEEEE;
+  border-radius: 10px;
+  color: #EEEEEE;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  transition: all 200ms ease-in-out;
+}
+.review-card > div > a:hover {
+  background: rgb(106, 85, 91);
+  border: 1px solid #EEEEEE;
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #EEEEEE;
+  margin: 0 0 10px 0;
+}
