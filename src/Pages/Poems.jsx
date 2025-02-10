@@ -29,7 +29,6 @@ export function Poems() {
               <p className="poem-date">Published <span className="date-text">{poem.poemDate}</span></p>
               <hr/>
               <pre className="poem-text">{poem.poemText.replace(/<br\s*\/?>/g, "\n")}</pre>
-
             </div>  
         )) :
           <p id="loading-poems">Loading Poems</p>}

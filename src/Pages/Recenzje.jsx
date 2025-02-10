@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import { Navbar1 } from "../Components/Navbar1.jsx"
 import { Footer } from "../Components/Footer.jsx"
-import './recenzje.css'
 import { reviews } from '../scripts/script.js'
 import { Navbar2 } from "../Components/Navbar2.jsx"
+import './recenzje.css'
 
 export function Recenzje() {
 
@@ -20,8 +20,7 @@ export function Recenzje() {
           {reviews && reviews.length > 0 ? (
             reviews.map((review, index) => (
               <>
-              
-              <div key={index} className="card-container">
+              <div className="card-container">
                 <div className="review-card">
                   <img
                     className="review-image"
