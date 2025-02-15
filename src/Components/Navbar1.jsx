@@ -9,13 +9,18 @@ export function Navbar1() {
     <div className="list-container">
       <ul className="nav-list">
         <li><Link className="links" to="/">Wiersze</Link></li>
-        <li><Link className="links" to="/Szepty">Szepty <br/> Przeszłości</Link></li>
+        <li><Link className="links" to="/Szepty">Szepty Przeszłości</Link></li>
         <li><Link className="links" to="/Recenzje">Recenzje</Link></li>
         <li><Link className="links" to="/Rozmowy">Rozmowy</Link></li>
         <li><Link className="links" to="/OMnie">O mnie</Link></li>
+        <li><Link id="lets-talk-btn" to="/Porozmawiajmy">Porozmawiajmy</Link></li>
       </ul>
-            <Link id="lets-talk-btn" to="/Porozmawiajmy">Porozmawiajmy</Link>
-    </div>
+            
+      </div>
+      <div className="glass-container">
+        <Link to="/Authentication"><i className="fa-solid fa-user"></i></Link>
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </div>
   </nav>
   )
 }

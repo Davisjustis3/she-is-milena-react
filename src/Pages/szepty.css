@@ -3,18 +3,11 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 300px 0;
 }
 #szepty-book {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-#szepty-book > h2 {
-  font-size: 3rem;
-  text-align: center;
-  padding: 30px;
-  color: #5F4254;
 }
 #book-container {
   width: 50vw;

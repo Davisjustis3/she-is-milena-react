@@ -3,16 +3,18 @@ import { Navbar1 } from "../Components/Navbar1"
 import { Navbar2 } from "../Components/Navbar2"
 import { Footer } from '../Components/Footer'
 import './rozmowy.css'
+import { Quotes } from "../Components/Quotes"
 
 export function Rozmowy() {
   return (
     <>
       <Navbar1 />
       <Navbar2/>
-    <main id="rozmowy">
+      <main id="rozmowy" className="main flex justify-center ">
+        <Quotes/>
     </main>
     <section id="rozmowy-video"> 
-      <h2>Rozmowy</h2>
+      <h2 className="title">Rozmowy</h2>
       <div id="rozmowy-container">
           <a href="https://www.facebook.com/watch/?v=691339941437722">
             <img src="https://sheismilena.com/wp-content/uploads/2020/07/adnotacja-2020-07-28-173327.png" alt="Milena conversation video" />

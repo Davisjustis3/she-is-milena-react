@@ -3,13 +3,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 300px 0;
-}
-#o-mnie-page > h2 {
-  font-size: 3rem;
-  text-align: center;
-  padding: 30px;
-  color: #5F4254;
 }
 #o-mnie-page {
   display: flex;

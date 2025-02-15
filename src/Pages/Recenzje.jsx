@@ -4,6 +4,7 @@ import { Footer } from "../Components/Footer.jsx"
 import { reviews } from '../scripts/script.js'
 import { Navbar2 } from "../Components/Navbar2.jsx"
 import './recenzje.css'
+import { Quotes } from "../Components/Quotes.jsx"
 
 export function Recenzje() {
 
@@ -12,10 +13,11 @@ export function Recenzje() {
     <>
       <Navbar1 />
       <Navbar2/>
-     <main id="recenzje">
+      <main id="recenzje">
+        <Quotes />
       </main>
-      <section id="recenzje-list"> 
-        <h2>Recenzje</h2>
+      <section id="recenzje-list" className="main flex justify-center "> 
+        <h2 className="title">Recenzje</h2>
         <div id="review-container">
           {reviews && reviews.length > 0 ? (
             reviews.map((review, index) => (

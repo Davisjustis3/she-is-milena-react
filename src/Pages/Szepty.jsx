@@ -3,16 +3,18 @@ import '/src/Pages/szepty.css'
 import { Navbar1 } from "../Components/Navbar1"
 import { Navbar2 } from "../Components/Navbar2"
 import { Footer } from "../Components/Footer"
+import { Quotes } from "../Components/Quotes"
 
 export function Szepty() {
   return (
     <>
       <Navbar1 />
       <Navbar2/>
-     <main id="szepty">
+      <main id="szepty" className="main flex justify-center ">
+        <Quotes />
   </main>
   <section id="szepty-book"> 
-    <h2>Szepty Przeszłości</h2>
+    <h2 className="title">Szepty Przeszłości</h2>
     <div id="book-container">
       <div id="text-container">
         <h3>O Książce</h3>

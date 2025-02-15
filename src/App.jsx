@@ -5,6 +5,7 @@ import { Recenzje } from './Pages/Recenzje.jsx'
 import { Rozmowy } from './Pages/Rozmowy.jsx'
 import { OMnie } from './Pages/OMnie.jsx'
 import { Porozmawiajmy } from './Pages/Porozmawiajmy.jsx'
+import { Authentication } from "./Pages/Authentication.jsx"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path="/Recenzje" element={<Recenzje/>}></Route>
     <Route path="/Rozmowy" element={<Rozmowy/>}></Route>
     <Route path="/OMnie" element={<OMnie/>}></Route>
+    <Route path="/Authentication" element={<Authentication/>}></Route>
     <Route path="/Porozmawiajmy" element={<Porozmawiajmy/>}></Route>
   </Routes>
 

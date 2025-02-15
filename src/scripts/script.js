@@ -61,4 +61,15 @@ export const reviews = [
     link: 'https://niezwykle-slowa.blogspot.com/2020/05/205-szepty-przeszosci.html'
   }
 ]
-
+export const quotes = [
+    `"Roses are red violets are blue"`,
+    `"Love is the most beautiful thing, actually maybe not more beautiful than a bacon cheesburger"`,
+    `"Ty jestes piekna. Bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo."`,
+    `"Without your eyes, you can't see. So why look"`,
+    `"The sun sets in the east, and I look for you in the west"`,
+    `"Once my eyes are laid upon thee, thee manifests the love of my imagination"`,
+    `"I cannot bare to breathe a second of the day if we are not heart in heart together"`,
+    `"My preconceived notions of love vanished at the sight of you. Now I know true love in its most pure state."`,
+    `"Where can I find love without you? It's like searching for air in the deepest depths of space."`,
+    `"Whenever we look to each other, your eyes reflect happienss, sincere longing, relentless love, and undying affection for you."`
+  ]
