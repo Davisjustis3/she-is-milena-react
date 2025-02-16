@@ -35,27 +35,27 @@ export function Authentication() {
         <button id="add-poetry-btn">Delete Poetry</button>
         <div id="top-container">
           <div>
-            <h2>Total Poetry:</h2>
+            <h2>Wszystkie Wiersze:</h2>
             <p>92</p>
           </div>
           <div>
-            <h2>Total Users:</h2>
+            <h2>Całkowita Liczba Użytkowników:</h2>
             <p>1</p>
           </div>
           <div>
-            <h2>Total Likes:</h2>
+            <h2>Całkowita Liczba Polubień:</h2>
             <p>93</p>
           </div>
         </div>
         <div id="bottom-container">
           <div>
-            <h2>Most Liked Poetry:</h2>
+            <h2>Najbardziej Lubiany Wiersz:</h2>
               <p>
                 Lah di dah lah di dah di dah
               </p>
           </div>
           <div>
-            <h2>Most visited Page:</h2>
+            <h2>Najczęściej Odwiedzana Strona:</h2>
             <p>
               Wiersze
             </p>
