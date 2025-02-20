@@ -18,8 +18,9 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.glass-container {
-  text-align: end;
+.login-container {
+  display: flex;
+  justify-content: end;
 }
 #logo {
   width: 150px;
@@ -151,8 +152,9 @@ input {
   border-radius: 10px;
   background-color: #EEEEEE;
   width: 400px;
+  min-height: 400px;
   max-height: 400px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 10px;
   cursor: pointer;
   transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
@@ -174,7 +176,7 @@ input {
   top: 1%;
 }
 .poem-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
   box-shadow: inset 0 0 50px rgba(170,170,170,80);
 }
 ::-webkit-scrollbar {

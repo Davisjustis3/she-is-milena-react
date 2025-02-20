@@ -1,0 +1,79 @@
+
+#popup-container {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#input-container {
+  display: flex;
+}
+#input-area > label {
+  color: rgba(0,0,0,0.4);
+  line-height: 4px;
+}
+#title {
+  font-size: 2rem;
+  color: #B1838E;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.input-bar{
+  background-color: rgba(190,190,190,0.4);
+  color: black;
+  margin: 0;
+}
+input::placeholder,
+textarea::placeholder,
+.input-bar::placeholder {
+  color: rgba(0,0,0,0.4);
+}
+#input-area {
+  display: flex;
+  align-items: flex-start;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  padding: 20px;
+  width: 30vw;
+}
+#submit-btn {
+  padding: 4px 12px;
+  border: 2px solid #B1838E;
+  color: #B1838E;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+#submit-btn:hover {
+  background-color: #B1838E;
+  color: white;
+}
+input, 
+textarea {
+  box-shadow: 0 4px 4px 0px rgba(180,160,160,.5);
+}
+input {
+  background-color: rgba(190,190,190,0.4);
+}
+#forgot, 
+#signup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#signup {
+  flex-direction: column;
+  align-items: center;
+
+}
+p > span {
+  color: #B1838E;
+}

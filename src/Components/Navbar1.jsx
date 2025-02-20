@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Login } from "./Login";
 
 export function Navbar1() {
+  const [popup, setPopup] = useState(false);
+  const handlePopup = () => {
+    setPopup((prev) => !prev)
+    setSignUpPopup(false)
+  }
+  const [signUpPopup, setSignUpPopup] = useState(false)
+   const handleSignUpPopup = () => {
+     setSignUpPopup((prev) => !prev)
+     setPopup(false)
+  }
+  const user = false
   return (  
+    <>
     <nav id="navbar1">
     <div className="logo-container">
       <Link to="/"><img id="logo" src="src/assets/miles-logo.webp" alt="Milena logo"/></Link>
@@ -17,10 +31,20 @@ export function Navbar1() {
       </ul>
             
       </div>
-      <div className="glass-container">
-        <Link to="/Authentication"><i className="fa-solid fa-user"></i></Link>
-        <i className="fa-solid fa-magnifying-glass"></i>
+      <div className="login-container">
+        <Link to="/AdminPage"><i className="fa-solid fa-user"></i></Link>
+        {!user ?
+                <p className="links-drop" onClick={handlePopup}>Login</p> :
+                <p className="links-drop" onClick={handlePopup}>Profile</p>
+              }
       </div>
-  </nav>
+    </nav>
+    <Login 
+        popup={popup}
+        handlePopup={handlePopup}
+        signUpPopup={signUpPopup}
+        handleSignUpPopup={handleSignUpPopup}
+    />
+    </>
   )
 }

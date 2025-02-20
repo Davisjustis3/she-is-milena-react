@@ -21,7 +21,7 @@ export function Quotes() {
   const startInterval = () => {
     intervalRef.current = setInterval(() => {
       nextImage();
-    }, 30000);
+    }, 10000);
   };
   const clearIntervalRef = () => {
     if (intervalRef.current) {

@@ -1,0 +1,104 @@
+#authentication {
+  display: flex;
+  background-color: #F5F5F5;
+  padding: 48px 0;
+}
+.logo-container-auth {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+#left-nav {
+  border-radius: 10px;
+  width: 15%;
+  
+}
+#logo-auth {
+  width: 120px;
+}
+.links {
+  color: black;
+}
+.nav-list-auth > li {
+  margin-bottom: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+}
+.nav-list-auth >li:hover {
+  background-color: rgba(197, 151, 162, .5);
+  color: #B1838E;
+}
+.fa-scroll,
+.fa-book,
+.fa-pen,
+.fa-microphone-lines,
+.fa-address-card {
+  margin-right: 12px;
+  width: 20px;
+}
+#authentication-container {
+  background: rgba(200,200,200,.3);
+  border-radius: 10px;
+  width: 85%;
+  padding: 20px;
+  box-shadow: inset 5px 0 10px 0 rgba(200,200,200,.6);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 8px 20px;
+  box-shadow: 0 8px 10px 0px rgba(200,200,200,.6);
+}
+#add-poetry-btn {
+  padding: 4px 8px;
+  border: 2px solid #B1838E;
+  color: #B1838E;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#add-poetry-btn:hover {
+  background-color: #B1838E;
+  color: white;
+}
+header > div {
+  margin-bottom: 8px;
+}
+#authentication-container > h2 {
+  font-size: 2rem;
+  color: #B1838E;
+}
+#top-container > h3 {
+  font-size: 1.2rem;
+  color: #B1838E;
+  margin-bottom: 8px;
+}
+#top-container {
+  background: #F5F5F5;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+#info-container {
+  display: flex;
+  justify-content: center;
+  background: rgb(231, 235, 239);
+  border-radius: 10px;
+  padding: 16px;
+  gap: 16px;
+}
+#interactions,
+#statistics,
+#settings {
+  padding: 16px;
+  border-radius: 10px;
+  width: 34%;
+}
+
+
+
+
+

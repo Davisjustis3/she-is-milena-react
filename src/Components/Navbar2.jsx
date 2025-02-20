@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { Login } from "./Login"
 
 export function Navbar2() {
   const [dropDown, setDropDown] = useState(false)
   const handleDropDown = () => {
     setDropDown((prev) => !prev)
   } 
+  const [popup, setPopup] = useState(false);
+  const handlePopup = () => {
+    setPopup((prev) => !prev);
+  }
+  // placeholder
+  const user = false
   return (
     <>
         <nav id="navbar2">
@@ -28,13 +35,20 @@ export function Navbar2() {
               <hr />
               <li><Link className="links-drop" to="/OMnie">O mnie</Link></li>
               <hr />
-              <Link className="links-drop" to="/Authentication">Admin Login</Link>
-              <hr />
               <li><Link className="links-drop" to="/Porozmawiajmy">Porozmawiajmy</Link></li>
+              <hr />
+              {!user ?
+                <li><a href="" className="links-drop" onClick={handlePopup}>Login</a></li> :
+                <li><a href="" className="links-drop" onClick={handlePopup}>Profile</a></li>
+              }
             </ul>
             )}
           </div>
-    </nav>
+      </nav>
+      <Login 
+        popup={popup}
+        handlePopup={handlePopup}
+    />
     </>
   )
 }
