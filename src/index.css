@@ -116,13 +116,6 @@ body {
   color: #5F4254;
   cursor: pointer;
 }
-/* Home */
-#home {
-  background-image: url(src/assets/home-page-book.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 #poems {
   height: fit-content;
   display: flex;
@@ -157,7 +150,6 @@ input {
   overflow-y: hidden;
   padding: 10px;
   cursor: pointer;
-  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
   box-shadow: 0 0 10px rgba(95, 66, 84, 60%);
 }
 .read-more {
@@ -169,6 +161,7 @@ input {
   padding: 10px;
   position: sticky;
   transition: opacity 300ms ease-in-out, left 300ms ease-in-out;
+  cursor: pointer;
 }
 .poem-card:hover .read-more {
   opacity: 1;
@@ -196,6 +189,7 @@ hr {
 .date-text {
   color: #F78FB3;
 }
+
 p > a {
   text-decoration: none;
   color: #b1838e;
@@ -215,17 +209,17 @@ pre {
 #loading-poems {
   font-size: 2rem;
   color: #EEEEEE;
-  
 }
 footer {
-  
   padding: 100px;
   text-align: center;
   background-color: #564147;
   line-height: 30px;
   color: #EEEEEE;
 }
-
+@keyframes poemCard {
+  
+}
 @media screen and (max-width: 850px) {
 #navbar1 {
   display: none;

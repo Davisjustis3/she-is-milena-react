@@ -4,14 +4,24 @@ import { Navbar2 } from "../Components/Navbar2"
 import { Footer } from '../Components/Footer'
 import './rozmowy.css'
 import { Quotes } from "../Components/Quotes"
+import { quotes } from '../scripts/script.js'
 
-export function Rozmowy() {
+export function Rozmowy(props) {
+  const {currentIndex, handleThumbnailClick} = props
   return (
     <>
       <Navbar1 />
       <Navbar2/>
-      <main id="rozmowy" className="main flex justify-center ">
-        <Quotes/>
+      <main id="rozmowy" className="main flex justify-center "
+      style={{
+            backgroundImage: `url(${quotes[currentIndex].background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+        <Quotes
+          currentIndex={currentIndex}
+          handleThumbnailClick={handleThumbnailClick} />
     </main>
     <section id="rozmowy-video"> 
       <h2 className="title">Rozmowy</h2>

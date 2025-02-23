@@ -1,9 +1,4 @@
-#szepty {
-  background-image: url(src/assets/szepty-background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 #szepty-book {
   display: flex;
   align-items: center;

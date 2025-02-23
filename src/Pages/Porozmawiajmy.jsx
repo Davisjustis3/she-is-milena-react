@@ -9,7 +9,7 @@ export function Porozmawiajmy() {
       <Navbar1/>
       <Navbar2/>
        <section id="contact">
-        <form action="https://formspree.io/f/xbldkwdn" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xbldkwdn" method="POST">
           <h2>Contact Me</h2>
             <label for="name">Name</label>
             <input className="white" type="text" name="name" placeholder="Name here" required/>

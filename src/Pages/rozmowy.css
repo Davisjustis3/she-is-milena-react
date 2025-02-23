@@ -1,9 +1,4 @@
-#rozmowy {
-  background-image: url(src/assets/rozmowy-background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 #rozmowy-video {
   display: flex;
   align-items: center;

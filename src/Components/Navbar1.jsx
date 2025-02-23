@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react";
 import { Login } from "./Login";
+import { onAuthStateChanged } from "firebase/auth";
 
 export function Navbar1() {
   const [popup, setPopup] = useState(false);
@@ -34,9 +35,8 @@ export function Navbar1() {
       <div className="login-container">
         <Link to="/AdminPage"><i className="fa-solid fa-user"></i></Link>
         {!user ?
-                <p className="links-drop" onClick={handlePopup}>Login</p> :
-                <p className="links-drop" onClick={handlePopup}>Profile</p>
-              }
+                <p className="links-drop" onClick={handlePopup}>Login</p> : 
+            <p className="links-drop" onClick={handlePopup}>Logout</p>}
       </div>
     </nav>
     <Login 

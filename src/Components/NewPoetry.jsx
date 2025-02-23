@@ -52,7 +52,7 @@ export function NewPoetry(props) {
               id="input-two"
               className="input-bar"
               type="text"
-              placeholder="2024-03-20"
+              placeholder="YYYY-MM-DD"
               value={poemDate}
               onChange={(e) => setPoemDate(e.target.value)}
               required />

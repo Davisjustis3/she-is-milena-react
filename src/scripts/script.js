@@ -1,3 +1,8 @@
+import img1 from "../assets/home-page-book.jpg" 
+import img2 from "../assets/omnie-background.jpg"
+import img3 from "../assets/recenzje-dark-background.jpg"
+import img4 from "../assets/rozmowy-background.jpg"
+import img5 from "../assets/szepty-background.jpg"
 export const reviews = [
   {
     image: 'https://sheismilena.com/wp-content/uploads/2020/07/20200319_015103.jpg',
@@ -62,14 +67,46 @@ export const reviews = [
   }
 ]
 export const quotes = [
-    `"Roses are red violets are blue"`,
-    `"Love is the most beautiful thing, actually maybe not more beautiful than a bacon cheesburger"`,
-    `"Ty jestes piekna. Bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo."`,
-    `"Without your eyes, you can't see. So why look"`,
-    `"The sun sets in the east, and I look for you in the west"`,
-    `"Once my eyes are laid upon thee, thee manifests the love of my imagination"`,
-    `"I cannot bare to breathe a second of the day if we are not heart in heart together"`,
-    `"My preconceived notions of love vanished at the sight of you. Now I know true love in its most pure state."`,
-    `"Where can I find love without you? It's like searching for air in the deepest depths of space."`,
-    `"Whenever we look to each other, your eyes reflect happienss, sincere longing, relentless love, and undying affection for you."`
-  ]
+  {
+    text: `"Roses are red violets are blue"`,
+    background: img1
+  },
+  {
+    text: `"Love is the most beautiful thing, actually maybe not more beautiful than a bacon cheesburger"`,
+    background: img2
+  },
+  {
+    text: `"Ty jestes piekna. Bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo bardzo."`,
+    background: img3
+  },
+  {
+    text: `"Without your eyes, you can't see. So why look"`,
+    background: img4
+  },
+  {
+    text: `"The sun sets in the east, and I look for you in the west"`,
+    background: img5
+  },
+  {
+    text: `"Once my eyes are laid upon thee, thee manifests the love of my imagination"`,
+    background: img1
+  },
+  {
+    text: `"I cannot bare to breathe a second of the day if we are not heart in heart together"`,
+    background: img2
+  },
+  {
+    text: `"My preconceived notions of love vanished at the sight of you. Now I know true love in its most pure state."`,
+    background: img3
+  },
+  {
+    text: `"Where can I find love without you? It's like searching for air in the deepest depths of space."`,
+    background: img4
+  },
+  {
+    text: `"Whenever we look to each other, your eyes reflect happienss, sincere longing, relentless love, and undying affection for you."`,
+    background: img5
+  }
+]
+
+

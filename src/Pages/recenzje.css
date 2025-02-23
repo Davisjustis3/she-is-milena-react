@@ -2,12 +2,6 @@
 html {
   overflow-x: hidden;
 }
-#recenzje {
-  background-image: url(src/assets/recenzje-dark-background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 #recenzje-list {
   display: flex;
   flex-direction: column;

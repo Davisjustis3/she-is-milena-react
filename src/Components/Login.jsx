@@ -1,6 +1,7 @@
 import "./popup.css"
 import { useState } from "react";
-import { signIn, googleSignIn } from "../AuthFirebase";
+import { signIn, googleSignIn, signUp } from "../AuthFirebase";
+import { AddUserCom } from "./AddUserCom";
 
 export function Login(props) {
   const { handlePopup, popup, handleSignUpPopup, signUpPopup } = props
@@ -17,13 +18,7 @@ export function Login(props) {
       alert(error.message);
     }
   };
-  const handleAddUser = async (e) => {
-    e.preventDefault();
-    try {
-    } catch {
-      alert(error.message)
-    }
-  }
+  
   return (
     <>
       { popup && (
@@ -62,47 +57,13 @@ export function Login(props) {
         </div>
       ) 
       }
-      { signUpPopup && (
-        <div id="popup-container">
-             <form id="input-area" onSubmit={handleLogin}>
-                <i className="fa-solid fa-x w-full text-end cursor-pointer" onClick={handleSignUpPopup}></i>
-                <div id="title">
-                    <h2>Sign Up</h2>
-                </div>
-                <label htmlFor="input-one">Email</label>
-                <input
-                    id="input-one"
-                    className="input-bar"
-                    type="email"
-                    placeholder="Type here..."
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                <label htmlFor="date">New Password</label>
-                <input
-                    id="input-two"
-                    className="input-bar"
-                    type="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-            required />
-                <label htmlFor="date">Repeat Password</label>
-                <input
-                    id="input-two"
-                    className="input-bar"
-                    type="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-            required />
-          <button value="submit" type="submit" id="submit-btn" className="cursor-pointer">Sign up</button>
-            <div id="signup">
-                    <p>Sign up with <span className="cursor-pointer" >Google</span></p>
-                    <p>Already have an account? <span className="cursor-pointer" onClick={handlePopup}>Sign in</span></p>
-          </div>
-              </form>
-        </div>
-      )
-      }
+      <AddUserCom
+        signUpPopup={signUpPopup}
+        handleLogin={handleLogin}
+        handleSignUpPopup={handleSignUpPopup}
+        handlePopup={handlePopup}
+      />
+      
     </>
 
     )

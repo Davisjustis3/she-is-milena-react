@@ -1,9 +1,4 @@
-#o-mnie {
-  background-image: url(src/assets/omnie-background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 #o-mnie-page {
   display: flex;
   align-items: center;

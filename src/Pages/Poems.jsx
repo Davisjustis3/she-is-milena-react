@@ -1,15 +1,18 @@
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs, query, orderBy} from "firebase/firestore";
 import { useEffect, useState, useRef } from "react";
 import { db } from "../config/FirebaseConfig";
 import { motion, useInView } from "framer-motion";
 
-export function Poems() {
+export function Poems(props) {
   const [poems, setPoems] = useState([]);
-
+  const { handlePoemDisplay } = props
+  
   useEffect(() => {
     const fetchPoems = async () => {
       try {
-        const snapshot = await getDocs(collection(db, "poems"));
+        const poemsCollection = collection(db, "poems");
+        const q = query(poemsCollection, orderBy("poemDate", "desc"));
+        const snapshot = await getDocs(q);
         const poemsData = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -25,7 +28,13 @@ export function Poems() {
   return (
     <div id="data" className="flex items-center gap-6 p-6">
       {poems.length > 0 ? (
-        poems.map((poem) => <AnimatedPoem key={poem.id} poem={poem} />)
+        poems.map((poem) =>
+          <AnimatedPoem
+          key={poem.id}
+            poem={poem}
+            handlePoemDisplay={handlePoemDisplay}
+          />
+        )
       ) : (
         <p id="loading-poems">Loading Poems...</p>
       )}
@@ -33,10 +42,9 @@ export function Poems() {
   );
 }
 
-function AnimatedPoem({ poem }) {
+function AnimatedPoem({ poem, handlePoemDisplay }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   return (
     <motion.div
       ref={ref}
@@ -45,7 +53,10 @@ function AnimatedPoem({ poem }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="poem-card bg-white shadow-lg rounded-lg p-6 w-full max-w-2xl"
     >
-      <button className="read-more">Read More</button>
+      <button
+        className="read-more"
+        onClick={() => handlePoemDisplay(poem)}
+      >Read More</button>
       <h1 className="poem-name font-bold text-xl">{poem.poemName}</h1>
       <p className="poem-date text-gray-500">
         Published <span className="date-text">{poem.poemDate}</span>

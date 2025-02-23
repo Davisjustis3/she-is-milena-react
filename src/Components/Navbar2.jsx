@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import { Login } from "./Login"
-
 export function Navbar2() {
   const [dropDown, setDropDown] = useState(false)
   const handleDropDown = () => {
@@ -9,7 +8,13 @@ export function Navbar2() {
   } 
   const [popup, setPopup] = useState(false);
   const handlePopup = () => {
-    setPopup((prev) => !prev);
+    setPopup((prev) => !prev)
+    setSignUpPopup(false)
+  }
+  const [signUpPopup, setSignUpPopup] = useState(false)
+   const handleSignUpPopup = () => {
+     setSignUpPopup((prev) => !prev)
+     setPopup(false)
   }
   // placeholder
   const user = false
@@ -38,17 +43,14 @@ export function Navbar2() {
               <li><Link className="links-drop" to="/Porozmawiajmy">Porozmawiajmy</Link></li>
               <hr />
               {!user ?
-                <li><a href="" className="links-drop" onClick={handlePopup}>Login</a></li> :
-                <li><a href="" className="links-drop" onClick={handlePopup}>Profile</a></li>
+                <li><a href="" className="links-drop" >Login</a></li> :
+                <li><a href="" className="links-drop" >Logout</a></li>
               }
             </ul>
             )}
           </div>
       </nav>
-      <Login 
-        popup={popup}
-        handlePopup={handlePopup}
-    />
+      
     </>
   )
 }

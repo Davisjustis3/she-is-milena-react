@@ -4,14 +4,24 @@ import { Navbar1 } from "../Components/Navbar1"
 import { Navbar2 } from "../Components/Navbar2"
 import { Footer } from "../Components/Footer"
 import { Quotes } from "../Components/Quotes"
+import { quotes } from '../scripts/script.js'
 
-export function Szepty() {
+export function Szepty(props) {
+  const {currentIndex, handleThumbnailClick} = props
   return (
     <>
       <Navbar1 />
       <Navbar2/>
-      <main id="szepty" className="main flex justify-center ">
-        <Quotes />
+      <main id="szepty" className="main flex justify-center "
+      style={{
+            backgroundImage: `url(${quotes[currentIndex].background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+        <Quotes
+          currentIndex={currentIndex}
+          handleThumbnailClick={handleThumbnailClick} />
   </main>
   <section id="szepty-book"> 
     <h2 className="title">Szepty Przeszłości</h2>

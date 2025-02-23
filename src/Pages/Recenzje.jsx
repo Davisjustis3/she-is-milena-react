@@ -5,16 +5,25 @@ import { reviews } from '../scripts/script.js'
 import { Navbar2 } from "../Components/Navbar2.jsx"
 import './recenzje.css'
 import { Quotes } from "../Components/Quotes.jsx"
+import { quotes } from '../scripts/script.js'
 
-export function Recenzje() {
-
+export function Recenzje(props) {
+  const {currentIndex, handleThumbnailClick} = props
   const reviewContainer = document.getElementById('review-container');
   return (
     <>
       <Navbar1 />
       <Navbar2/>
-      <main id="recenzje">
-        <Quotes />
+      <main id="recenzje"
+      style={{
+            backgroundImage: `url(${quotes[currentIndex].background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+        <Quotes
+          currentIndex={currentIndex}
+          handleThumbnailClick={handleThumbnailClick} />
       </main>
       <section id="recenzje-list" className="main flex justify-center "> 
         <h2 className="title">Recenzje</h2>
